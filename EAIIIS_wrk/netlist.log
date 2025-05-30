@@ -1,0 +1,50 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EAIIIS_lib:cell_40_choque:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+MTAPER:TaperCin  N__2 N__13 Subst="MSub1" W1=3.522 mm W2=1.5 mm L=3 mm 
+MTAPER:TaperCout  N__10 N__23 Subst="MSub1" W1=3.522 mm W2=1.5 mm L=3 mm 
+#include "C:/Users/windows/Desktop/Infineon_RF//circuit/models/BFP450_cktName.net" 
+BFP450_cktName:SNP1 N__16 N__13 0 File="BFP450_w_noise_VCE_3.0V_IC_40mA.s2p" Temp=25 InterpMode="linear" InterpDom="" ExtrapMode="constant" CheckPassivity=0 
+
+
+
+SweepPlan:s2p_Freqs SweepPlan[1]="s2p_Freqs_seg1" \ 
+SweepPlan[2]="s2p_Freqs_seg2" \ 
+SweepPlan[3]="s2p_Freqs_seg3" 
+SweepPlan:s2p_Freqs_seg1 Start=0.03e9 Stop=0.15e9 Step=0.01e9 
+SweepPlan:s2p_Freqs_seg2 Start=0.2e9 Stop=0.45e9 Step=0.05e9 
+SweepPlan:s2p_Freqs_seg3 Start=0.5e9 Stop=4e9 Step=0.01e9 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="s2p_Freqs" OutputPlan="SP1_Output" 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+MLOC2:OpenCdecoup2  N__12 Subst="MSub1" W=7.189670 mm L=0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:OpenCin  N__5 Subst="MSub1" W=3.522 mm L=0 Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+model MSub1 MSUB H=1.66 mm Er=4  Mur=1  Cond=50.0E6  Hu=3.9e+034 mil T=0.04 mm TanD=0  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+MLOC2:OpenCout  N__4 Subst="MSub1" W=3.522 mm L=0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:Cout  N__10 N__4 Subst="MSub1" W=3.522 mm L=8.191 mm tune{ 5.154175 mm to 15.462525 mm by 0.2 mm } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:Cin  N__2 N__5 Subst="MSub1" W=3.522 mm L=15.8912496 mm tune{ 9.45256 mm to 28.35768 mm by 0.2 mm } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:QWout  N__16 N__23 Subst="MSub1" W=7.14951 mm L=22.214000 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:OpenCdecoup1  N__14 Subst="MSub1" W=7.189670 mm L=0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:QWin  N__11 N__13 Subst="MSub1"  W=9.846680 mm L=21.8744 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:Cdecoup1  N__14 N__15 Subst="MSub1"  W=7.189670 mm L=20.4263 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:L_ch1  N__13 N__0 Subst="MSub1"  W=1.354190 mm L=23.953100 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Port:Zin  N__18 0 Num=1 Z=50 Ohm Noise=yes 
+Port:Zout  N__26 0 Num=2 Z=50 Ohm Noise=yes 
+MLIN2:Cdecoup2  N__12 N__9 Subst="MSub1" W=7.189670 mm L=20.4263 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:L_ch2  N__16 N__17 Subst="MSub1"  W=1.354190 mm L=23.953100 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MTAPER:TaperCdecoup1  N__15 N__0 Subst="MSub1" W1=7.189670 mm W2=1.5 mm L=3 mm 
+MTAPER:TaperCdecoup2  N__9 N__17 Subst="MSub1" W1=7.189670 mm W2=1.5 mm L=3 mm 
+MLIN2:TL2  N__3 N__11 Subst="MSub1"  W=3.522 mm L=10 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL1  N__18 N__19 Subst="MSub1" W=3.522 mm L=10 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+C:C1  N__19 N__3 C=10 nF 
+MLIN2:TL3  N__23 N__28 Subst="MSub1"  W=3.522 mm L=10 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL4  N__27 N__26 Subst="MSub1"  W=3.522 mm L=10 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+C:C2  N__28 N__27 C=10 nF 

@@ -1,0 +1,4 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE ../Infineon_RF/lib.defs
+DEFINE EAIIIS_lib EAIIIS_lib
+ASSIGN EAIIIS_lib libMode shared

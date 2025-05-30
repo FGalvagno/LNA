@@ -1,0 +1,16 @@
+SYSTEM_CUSTOM_CIRCUIT_SYMBOLS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS};{$HPEESOF_DIR}\custom\{%PROJECT1}\symbols
+SYSTEM_CUSTOM_CIRCUIT_DESIGNS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS};{$HPEESOF_DIR}\custom\{%PROJECT1}\designs
+VIA_CONFIG_PATH={%DESIGN_KIT_VIA_CONFIG_PATH};.:{%PROJECT_SEARCH_PATH}:{$HOME}\hpeesof\de\defaults:{$HPEESOF_DIR}\de\defaults:{%DESIGN_KIT_VIA_CONFIG_PATH}:{%USER_VIA_CONFIG_PATH}
+LAST_LIBRARY_SELECTED=EAIIIS_lib
+SCHEM_FILE_OPEN_HISTORY_1=EAIIIS_lib:cell_dc:schematic
+SCHEM_FILE_OPEN_HISTORY_2=EAIIIS_lib:cell_40_choque:schematic
+SCHEM_FILE_OPEN_HISTORY_3=EAIIIS_lib:cell_40_caps:schematic
+SCHEM_FILE_OPEN_HISTORY_4=EAIIIS_lib:cell_facu:schematic
+SCHEM_FILE_OPEN_HISTORY_5=EAIIIS_lib:cell_ej:schematic
+
+LAYOUT_FILE_OPEN_HISTORY_1=EAIIIS_lib:cell_3:layout
+
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS=C:\Users\windows\Desktop\Infineon_RF\circuit\symbols;C:\Users\windows\Desktop\Infineon_RF\circuit\symbols
+DESIGN_KIT_DATA_FILES=C:\Users\windows\Desktop\Infineon_RF\circuit\data;C:\Users\windows\Desktop\Infineon_RF\circuit\models
+LAYOUT_FILE_OPEN_HISTORY_2=EAIIIS_lib:layout?2:layout
+LAYOUT_FILE_OPEN_HISTORY_3=EAIIIS_lib:cell_4:layout

@@ -1,0 +1,16 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+
+SP SP1[1] <EAIIIS_lib:cell_30:schematic>   freq=(30 MHz->4 GHz)
+Warning detected by hpeesofsim during SP analysis `SP1'.
+    Noise data in the Touchstone file `C:/users/windows/desktop/infineon_rf/circuit/data/BFP450_w_noise_VCE_3.0V_IC_30mA.s2p'
+    does not cover the current value of `freq'. Therefore, if noise
+    simulation is requested the data will be obtained by extrapolation.
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+Resource usage:
+  Total stopwatch time     =     0.64 seconds.
+
